@@ -1,0 +1,59 @@
+.charsheet {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background: #f7f7f7;
+    color: #602749;
+
+}
+.charsheet .sheet-logo {
+    width:30%;
+    margin-bottom:1vh;
+}
+.charsheet input,.charsheet select,.charsheet textarea {
+    background: inherit;
+    color: inherit;
+}
+.charsheet label {
+    font-size: inherit;
+    color: inherit;
+}
+.charsheet label input {
+    margin-left: 2%;
+}
+.charsheet label input[type = "radio"]{
+    margin-left: .3%;
+    margin-right: 2%;
+}
+.charsheet .sheet-ranks {
+    display: inline;
+    margin-left: 2%;
+}
+.charsheet .sheet-section {
+    border: 2px #602749 solid;
+    border-radius: 2px;
+    padding: 2vh;
+    margin-bottom: 2vh;
+}
+
+.charsheet .sheet-divider {
+    background-color:#b14623;
+    height: 1px;
+    width: 90%;
+    margin-bottom: 3vh;
+
+}
+
+.charsheet table{
+    width: 100%;
+    text-align: center;
+}
+.charsheet td {
+    padding: 1vh;
+}
+.charsheet .sheet-statlabel {
+    background-color: #b14623;
+    color: #f7f7f7;
+    font-weight: bold;
+}
+.charsheet .sheet-hidden {
+    display:none;
+}

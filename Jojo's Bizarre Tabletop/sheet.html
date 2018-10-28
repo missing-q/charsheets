@@ -1,0 +1,246 @@
+<html>
+    <div class = "charinfo">
+        <div class = "logo">
+            <img src = "https://vignette.wikia.nocookie.net/jjba/images/d/d5/Jojo's_Bizarre_Adventure_(Classic_English_Logo_Vector).png">
+        </div>
+        <div class = "user section">
+            <!--Character name-->
+            <label>
+                Character Name
+                <input name = "attr_character_name">
+            </label>
+
+            <div class = "divider"></div>
+
+            <label>
+                Character Points
+                <input name = "attr_cp" type = "number">
+            </label>
+
+            <div class = "divider"></div>
+
+            <label>
+                Character Types
+                <fieldset class = "repeating_chartypes">
+                    <select name = "attr_chartype">
+                        <option value = ""></option>
+                        <option value = "Robotic">Robotic</option>
+                        <option value = "Hype Man">Hype Man</option>
+                        <option value = "Hamon">Hamon</option>
+                        <option value = "Vampire">Vampire</option>
+                        <option value = "Spin">Spin</option>
+                        <option value = "No Stand">No Stand</option>
+                    </select>
+                    <div class = "ranks">
+                        Rank 1 <input type = "radio" name = "attr_typerank">
+                        Rank 2 <input type = "radio" name = "attr_typerank">
+                        Rank 3 <input type = "radio" name = "attr_typerank">
+                    </div>
+                </fieldset>
+            </label>
+
+            <div class = "divider"></div>
+
+            <!-- User Stats -->
+            <table>
+                <tr class = "statlabel">
+                    <td>Brains</td>
+                    <td>Brawns</td>
+                    <td>Bravery</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input name = "attr_brains" type = "number" value = "0">
+                    </td>
+                    <td>
+                        <input name = "attr_brawns" type = "number" value = "0">
+                    </td>
+                    <td>
+                        <input name = "attr_bravery" type = "number" value = "0">
+                    </td>
+                </tr>
+                <tr class = "statlabel">
+                    <td>Real Health</td>
+                    <td>Resolve Health</td>
+                    <td>Bizarre Points</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input name = "attr_health" type = "number" value = "0">
+                    </td>
+                    <td>
+                        <input name = "attr_resolve" type = "number" value = "0">
+                    </td>
+                    <td>
+                        <input name = "attr_bp" type = "number" value = "0">
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+
+        <!--Stand wrapper - hides when the "No Stand" option is selected -->
+        <div class = "stand">
+            <!-- Stand Stats and info-->
+            <div class = "standinfo section">
+                <label>
+                    Stand Name <input name = "attr_stand_name">
+                </label>
+                <!--Add tooltips of each stand type description using the Title parameter-->
+                <label>
+                    Stand Types
+                    <fieldset class = "repeating_standtypes">
+                        <select name = "attr_standtype">
+                            <option value = ""></option>
+                            <option disabled>DISTANCE</option>
+                            <option value = "Close Distance Power">Close Distance Power</option>
+                            <option value = "Long Distance Manipulation">Long Distance Manipulation</option>
+                            <option value = "Far Distance Autopilot">Far Distance Autopilot</option>
+                            <option disabled>FORM</option>
+                            <option value = "Substance Assimilation">Substance Assimilation</option>
+                            <option value = "Integrated">Integrated</option>
+                            <option value = "Wearable">Wearable</option>
+                            <option value = "Colony">Colony</option>
+                            <option disabled>MISC.</option>
+                            <option value = "ACT Stand">ACT Stand</option>
+                            <option value = "Universal Range">Universal Range</option>
+                        </select>
+                    </fieldset>
+                </label>
+
+                <div class = "divider"></div>
+
+                <!--Stats-->
+                <table>
+                    <tr class = "statlabel">
+                        <td>Stat</td>
+                        <td>Rank</td>
+                        <td>Dice</td>
+                        <td>Modifier</td>
+                    </tr>
+                    <tr class = "power">
+                        <td>Power</td>
+                        <td>
+                            <select name = "attr_powerval">
+                                <option>A</option>
+                                <option>B</option>
+                                <option selected>C</option>
+                                <option>D</option>
+                                <option>E</option>
+                            </select>
+                        </td>
+                        <td><span name = "attr_power_dice" value = "2d6">2d6</span></td>
+                        <td><span name = "attr_power_mod" value = "1">1</span></td>
+                    </tr>
+                    <tr class = "speed">
+                        <td>Speed</td>
+                        <td>
+                            <select name = "attr_speedval">
+                                <option>A</option>
+                                <option>B</option>
+                                <option selected>C</option>
+                                <option>D</option>
+                                <option>E</option>
+                            </select>
+                        </td>
+                        <td><span name = "attr_speed_dice" value = "2d6">2d6</span></td>
+                        <td><span name = "attr_speed_mod" value = "1">1</span></td>
+                    </tr>
+                    <tr class = "range">
+                        <td>Range</td>
+                        <td>
+                            <select name = "attr_rangeval">
+                                <option>A</option>
+                                <option>B</option>
+                                <option selected>C</option>
+                                <option>D</option>
+                                <option>E</option>
+                            </select>
+                        </td>
+                        <td><span name = "attr_range_dice" value = "2d6">2d6</span></td>
+                        <td><span name = "attr_range_mod" value = "1">1</span></td>
+                    </tr>
+                    <tr class = "durability">
+                        <td>Durability</td>
+                        <td>
+                            <select name = "attr_durabilityval">
+                                <option>A</option>
+                                <option>B</option>
+                                <option selected>C</option>
+                                <option>D</option>
+                                <option>E</option>
+                            </select>
+                        </td>
+                        <td><span name = "attr_durability_dice" value = "2d6">2d6</span></td>
+                        <td><span name = "attr_durability_mod" value = "1">1</span></td>
+                    </tr>
+                    <tr class = "precision">
+                        <td>Precision</td>
+                        <td>
+                            <select name = "attr_precisionval">
+                                <option>A</option>
+                                <option>B</option>
+                                <option selected>C</option>
+                                <option>D</option>
+                                <option>E</option>
+                            </select>
+                        </td>
+                        <td><span name = "attr_precision_dice" value = "2d6">2d6</span></td>
+                        <td><span name = "attr_precision_mod" value = "1">1</span></td>
+                    </tr>
+                    <tr class = "learning">
+                        <td>Learning</td>
+                        <td>
+                            <select name = "attr_learningval">
+                                <option>A</option>
+                                <option>B</option>
+                                <option selected>C</option>
+                                <option>D</option>
+                                <option>E</option>
+                            </select>
+                        </td>
+                        <td><span name = "attr_learning_dice" value = "2d6">2d6</span></td>
+                        <td><span name = "attr_learning_mod" value = "1">1</span></td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+        <!--The section of the ~forbidden~ inputs. This should always go last. -->
+        <div class = "hidden">
+            <input name = "attr_power_dice" value = "2d6">
+            <input name = "attr_power_mod" value = "1">
+            <input name = "attr_speed_dice" value = "2d6">
+            <input name = "attr_speed_mod" value = "1">
+            <input name = "attr_range_dice" value = "2d6">
+            <input name = "attr_range_mod" value = "1">
+            <input name = "attr_durability_dice" value = "2d6">
+            <input name = "attr_durability_mod" value = "1">
+            <input name = "attr_precision_dice" value = "2d6">
+            <input name = "attr_precision_mod" value = "1">
+            <input name = "attr_learning_dice" value = "2d6">
+            <input name = "attr_learning_mod" value = "1">
+            <!--Stand checkbox-->
+            <input name = "attr_hasstand" type = "checkbox" checked value = "1">
+        </div>
+    </div>
+
+    <!-- It's time for scripts -->
+    <script type="text/worker">
+    //here we go
+    //hides stand sections when box isn't checked
+    on("change:repeating_chartypes:chartype", function(eventInfo) {
+
+    });
+
+    //stat dice functs
+    on("change:repeating_spells:spellname", function(eventInfo) {
+
+    });
+
+    </script>
+
+</html>
