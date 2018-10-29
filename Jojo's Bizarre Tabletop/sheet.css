@@ -57,3 +57,54 @@
 .charsheet .sheet-hidden {
     display:none;
 }
+.charsheet input.sheet-has_stand:not(:checked) ~ .sheet-stand{
+    display: none;
+}
+/*Critical weakness stuffs*/
+.charsheet .sheet-power_cw{
+    display: none;
+}
+.charsheet .sheet-speed_cw{
+    display: none;
+}
+.charsheet .sheet-range_cw{
+    display: none;
+}
+.charsheet .sheet-durability_cw{
+    display: none;
+}
+.charsheet .sheet-precision_cw{
+    display: none;
+}
+.charsheet .sheet-learning_cw{
+    display: none;
+}
+.charsheet .sheet-cw textarea {
+    height: 60%;
+}
+/*Input buttons*/
+.charsheet input[name = "attr_cw"]:checked ~.sheet-cw {
+    display: table;
+}
+.charsheet input[name = "attr_power_cw"]:checked ~.sheet-power_cw {
+    display: table;
+}
+.charsheet input[name = "attr_speed_cw"]:checked ~.sheet-speed_cw {
+    display: table;
+}
+.charsheet input[name = "attr_range_cw"]:checked ~.sheet-range_cw {
+    display: table;
+}
+.charsheet input[name = "attr_durability_cw"]:checked ~.sheet-durability_cw {
+    display: table;
+}
+.charsheet input[name = "attr_precision_cw"]:checked ~.sheet-precision_cw {
+    display: table;
+}
+.charsheet input[name = "attr_learning_cw"]:checked ~.sheet-learning_cw {
+    display: table;
+}
+/*Textarea nonsense*/
+.charsheet .sheet-cw textarea {
+    height: 60%;
+}

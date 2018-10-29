@@ -10,11 +10,9 @@
                 <input name = "attr_character_name">
             </label>
 
-            <div class = "divider"></div>
-
             <label>
                 Character Points
-                <input name = "attr_cp" type = "number">
+                <input name = "attr_cp" type = "number" value = "0">
             </label>
 
             <div class = "divider"></div>
@@ -76,9 +74,9 @@
                     </td>
                 </tr>
             </table>
-
-
         </div>
+
+        <input name = "attr_hasstand" type = "checkbox" class = "has_stand hidden" checked = "checked" value = "1">
 
         <!--Stand wrapper - hides when the "No Stand" option is selected -->
         <div class = "stand">
@@ -122,7 +120,7 @@
                     <tr class = "power">
                         <td>Power</td>
                         <td>
-                            <select name = "attr_powerval">
+                            <select name = "attr_power_val">
                                 <option>A</option>
                                 <option>B</option>
                                 <option selected>C</option>
@@ -131,12 +129,12 @@
                             </select>
                         </td>
                         <td><span name = "attr_power_dice" value = "2d6">2d6</span></td>
-                        <td><span name = "attr_power_mod" value = "1">1</span></td>
+                        <td><span name = "attr_power_mod" value = "1">+1</span></td>
                     </tr>
                     <tr class = "speed">
                         <td>Speed</td>
                         <td>
-                            <select name = "attr_speedval">
+                            <select name = "attr_speed_val">
                                 <option>A</option>
                                 <option>B</option>
                                 <option selected>C</option>
@@ -145,12 +143,12 @@
                             </select>
                         </td>
                         <td><span name = "attr_speed_dice" value = "2d6">2d6</span></td>
-                        <td><span name = "attr_speed_mod" value = "1">1</span></td>
+                        <td><span name = "attr_speed_mod" value = "1">+1</span></td>
                     </tr>
                     <tr class = "range">
                         <td>Range</td>
                         <td>
-                            <select name = "attr_rangeval">
+                            <select name = "attr_range_val">
                                 <option>A</option>
                                 <option>B</option>
                                 <option selected>C</option>
@@ -159,12 +157,12 @@
                             </select>
                         </td>
                         <td><span name = "attr_range_dice" value = "2d6">2d6</span></td>
-                        <td><span name = "attr_range_mod" value = "1">1</span></td>
+                        <td><span name = "attr_range_mod" value = "1">+1</span></td>
                     </tr>
                     <tr class = "durability">
                         <td>Durability</td>
                         <td>
-                            <select name = "attr_durabilityval">
+                            <select name = "attr_durability_val">
                                 <option>A</option>
                                 <option>B</option>
                                 <option selected>C</option>
@@ -173,12 +171,12 @@
                             </select>
                         </td>
                         <td><span name = "attr_durability_dice" value = "2d6">2d6</span></td>
-                        <td><span name = "attr_durability_mod" value = "1">1</span></td>
+                        <td><span name = "attr_durability_mod" value = "1">+1</span></td>
                     </tr>
                     <tr class = "precision">
                         <td>Precision</td>
                         <td>
-                            <select name = "attr_precisionval">
+                            <select name = "attr_precision_val">
                                 <option>A</option>
                                 <option>B</option>
                                 <option selected>C</option>
@@ -187,12 +185,12 @@
                             </select>
                         </td>
                         <td><span name = "attr_precision_dice" value = "2d6">2d6</span></td>
-                        <td><span name = "attr_precision_mod" value = "1">1</span></td>
+                        <td><span name = "attr_precision_mod" value = "1">+1</span></td>
                     </tr>
                     <tr class = "learning">
                         <td>Learning</td>
                         <td>
-                            <select name = "attr_learningval">
+                            <select name = "attr_learning_val">
                                 <option>A</option>
                                 <option>B</option>
                                 <option selected>C</option>
@@ -201,7 +199,58 @@
                             </select>
                         </td>
                         <td><span name = "attr_learning_dice" value = "2d6">2d6</span></td>
-                        <td><span name = "attr_learning_mod" value = "1">1</span></td>
+                        <td><span name = "attr_learning_mod" value = "1">+1</span></td>
+                    </tr>
+                </table>
+
+                <!--Critical weaknesses-->
+                <div class = "statlabel" style = "width: 100%; text-align: center; padding:1vh;">Critical Weaknesses</div>
+                <!--Power-->
+                <input name = "attr_power_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
+                <table class = "power_cw cw">
+                    <tr>
+                        <td>Power</td>
+                        <td><textarea name = "attr_power_cw_input"></textarea></td>
+                    </tr>
+                </table>
+                <!--Speed-->
+                <input name = "attr_speed_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
+                <table class = "speed_cw cw">
+                    <tr>
+                        <td>Speed</td>
+                        <td><textarea name = "attr_speed_cw_input"></textarea></td>
+                    </tr>
+                </table>
+                <!--Range-->
+                <input name = "attr_range_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
+                <table class = "range_cw cw">
+                    <tr>
+                        <td>Range</td>
+                        <td><textarea name = "attr_range_cw_input"></textarea></td>
+                    </tr>
+                </table>
+                <!--Durability-->
+                <input name = "attr_durability_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
+                <table class = "durability_cw cw">
+                    <tr>
+                        <td>Durability</td>
+                        <td><textarea name = "attr_durability_cw_input"></textarea></td>
+                    </tr>
+                </table>
+                <!--Precision-->
+                <input name = "attr_precision_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
+                <table class = "precision_cw cw">
+                    <tr>
+                        <td>Precision</td>
+                        <td><textarea name = "attr_precision_cw_input"></textarea></td>
+                    </tr>
+                </table>
+                <!--Learning-->
+                <input name = "attr_learning_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
+                <table class = "learning_cw cw">
+                    <tr>
+                        <td>Learning</td>
+                        <td><textarea name = "attr_learning_cw_input"></textarea></td>
                     </tr>
                 </table>
 
@@ -224,22 +273,177 @@
             <input name = "attr_learning_dice" value = "2d6">
             <input name = "attr_learning_mod" value = "1">
             <!--Stand checkbox-->
-            <input name = "attr_hasstand" type = "checkbox" checked value = "1">
+
         </div>
     </div>
 
     <!-- It's time for scripts -->
     <script type="text/worker">
-    //here we go
-    //hides stand sections when box isn't checked
-    on("change:repeating_chartypes:chartype", function(eventInfo) {
+      //here we go
+      var getSectionIDsOrdered = function (sectionName, callback) {
+        'use strict';
+        getAttrs([`_reporder_${sectionName}`], function (v) {
+          getSectionIDs(sectionName, function (idArray) {
+            let reporderArray = v[`_reporder_${sectionName}`] ? v[`_reporder_${sectionName}`].toLowerCase().split(',') : [],
+              ids = [...new Set(reporderArray.filter(x => idArray.includes(x)).concat(idArray))];
+            callback(ids);
+          });
+        });
+      };
+      //hides stand sections when box isn't checked
+      on("change:repeating_chartypes:chartype", function(eventInfo) {
+        getAttrs(["hasstand"], function(v) {
+          console.log(v);
+          log(eventInfo.newValue);
+          log(eventInfo.newValue = "No Stand")
+          if (eventInfo.newValue == "No Stand")
+          setAttrs({
+              hasstand: 0
+          });
+          console.log(v.hasstand)
+        });
+      });
+      on("remove:repeating_chartypes", function(eventInfo) {
+          console.log(eventInfo);
+          id = eventInfo.sourceAttribute;
+          obj = eventInfo.removedInfo;
+          if (obj[id + "_chartype"] == "No Stand"){
+              getAttrs(["hasstand"], function(v) {
+                  console.log(v);
+                  setAttrs({
+                      hasstand: 1
+                  });
+                  console.log(v.hasstand)
+              });
+          }
+      });
 
-    });
+      //stat dice and mods
+      let rankvals = ["E","D","C","B","A"]
+      let dicevals = ["1d6","2d6 keep 1","2d6","3d6 keep 2","3d6"];
+      let modvals = ["-5","-3","+1","+3","+5"];
 
-    //stat dice functs
-    on("change:repeating_spells:spellname", function(eventInfo) {
+      on("change:power_val", function(eventInfo) {
+          getAttrs(["power_val","power_dice","power_mod"], function(v) {
+              let value = v.power_val;
+              let index = rankvals.indexOf(value);
+              setAttrs({
+                  power_dice: dicevals[index],
+                  power_mod: modvals[index]
+              });
+              if (value == "E"){
+                  console.log("Power is E rank!");
+                  setAttrs({
+                      power_cw: 1
+                  });
+              } else {
+                  setAttrs({
+                      cw: 0,
+                      power_cw: 0
+                  });
+              }
 
-    });
+          });
+      });
+      on("change:speed_val", function(eventInfo) {
+          getAttrs(["speed_val","speed_dice","speed_mod"], function(v) {
+              let value = v.speed_val;
+              let index = rankvals.indexOf(value);
+              setAttrs({
+                  speed_dice: dicevals[index],
+                  speed_mod: modvals[index]
+              });
+              if (value == "E"){
+                  setAttrs({
+                      speed_cw: 1
+                  });
+              } else {
+                  setAttrs({
+                      cw: 0,
+                      speed_cw: 0
+                  });
+              }
+          });
+      });
+      on("change:range_val", function(eventInfo) {
+          getAttrs(["range_val","range_dice","range_mod"], function(v) {
+              let value = v.range_val;
+              let index = rankvals.indexOf(value);
+              setAttrs({
+                  range_dice: dicevals[index],
+                  range_mod: modvals[index]
+              });
+              if (value == "E"){
+                  setAttrs({
+                      range_cw: 1
+                  });
+              } else {
+                  setAttrs({
+                      cw: 0,
+                      range_cw: 0
+                  });
+              }
+          });
+      });
+      on("change:durability_val", function(eventInfo) {
+          getAttrs(["durability_val","durability_dice","durability_mod"], function(v) {
+              let value = v.durability_val;
+              let index = rankvals.indexOf(value);
+              setAttrs({
+                  durability_dice: dicevals[index],
+                  durability_mod: modvals[index]
+              });
+              if (value == "E"){
+                  setAttrs({
+                      durability_cw: 1
+                  });
+              } else {
+                  setAttrs({
+                      cw: 0,
+                      durability_cw: 0,
+                  });
+              }
+          });
+      });
+      on("change:precision_val", function(eventInfo) {
+          getAttrs(["precision_val","precision_dice","precision_mod"], function(v) {
+              let value = v.precision_val;
+              let index = rankvals.indexOf(value);
+              setAttrs({
+                  precision_dice: dicevals[index],
+                  precision_mod: modvals[index]
+              });
+              if (value == "E"){
+                  setAttrs({
+                      precision_cw: 1
+                  });
+              } else {
+                  setAttrs({
+                      precision_cw: 0
+                  });
+              }
+          });
+      });
+      on("change:learning_val", function(eventInfo) {
+          getAttrs(["learning_val","learning_dice","learning_mod"], function(v) {
+              let value = v.learning_val;
+              let index = rankvals.indexOf(value);
+              setAttrs({
+                  learning_dice: dicevals[index],
+                  learning_mod: modvals[index]
+              });
+              if (value == "E"){
+                  setAttrs({
+                      learning_cw: 1
+                  });
+              } else {
+                  setAttrs({
+                      learning_cw: 0
+                  });
+              }
+          });
+      });
+
 
     </script>
 
