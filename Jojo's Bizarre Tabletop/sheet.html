@@ -1,7 +1,7 @@
 <html>
     <div class = "charinfo">
         <div class = "logo">
-            <img src = "https://vignette.wikia.nocookie.net/jjba/images/d/d5/Jojo's_Bizarre_Adventure_(Classic_English_Logo_Vector).png">
+            <img src = "https://raw.githubusercontent.com/missing-q/charsheets/master/Jojo's%20Bizarre%20Tabletop/assets/logo.png">
         </div>
         <div class = "user section">
             <!--Character name-->
@@ -118,7 +118,7 @@
                         <td>Modifier</td>
                     </tr>
                     <tr class = "power">
-                        <td>Power</td>
+                        <td><button type='roll' value='/roll @{power_dice}'>Power</button></td>
                         <td>
                             <select name = "attr_power_val">
                                 <option>A</option>
@@ -132,7 +132,7 @@
                         <td><span name = "attr_power_mod" value = "1">+1</span></td>
                     </tr>
                     <tr class = "speed">
-                        <td>Speed</td>
+                        <td><button type='roll' value='/roll @{speed_dice}'>Speed</button></td>
                         <td>
                             <select name = "attr_speed_val">
                                 <option>A</option>
@@ -146,7 +146,7 @@
                         <td><span name = "attr_speed_mod" value = "1">+1</span></td>
                     </tr>
                     <tr class = "range">
-                        <td>Range</td>
+                        <td><button type='roll' value='/roll @{range_dice}'>Range</button></td>
                         <td>
                             <select name = "attr_range_val">
                                 <option>A</option>
@@ -160,7 +160,7 @@
                         <td><span name = "attr_range_mod" value = "1">+1</span></td>
                     </tr>
                     <tr class = "durability">
-                        <td>Durability</td>
+                        <td><button type='roll' value='/roll @{durability_dice}'>Durability</button></td>
                         <td>
                             <select name = "attr_durability_val">
                                 <option>A</option>
@@ -174,7 +174,7 @@
                         <td><span name = "attr_durability_mod" value = "1">+1</span></td>
                     </tr>
                     <tr class = "precision">
-                        <td>Precision</td>
+                        <td><button type='roll' value='/roll @{precision_dice}'>Precision</button></td>
                         <td>
                             <select name = "attr_precision_val">
                                 <option>A</option>
@@ -188,7 +188,7 @@
                         <td><span name = "attr_precision_mod" value = "1">+1</span></td>
                     </tr>
                     <tr class = "learning">
-                        <td>Learning</td>
+                        <td><button type='roll' value='/roll @{learning_dice}'>Learning</button></td>
                         <td>
                             <select name = "attr_learning_val">
                                 <option>A</option>
@@ -204,7 +204,7 @@
                 </table>
 
                 <!--Critical weaknesses-->
-                <div class = "statlabel" style = "width: 100%; text-align: center; padding:1vh;">Critical Weaknesses</div>
+                <table><tr class = "statlabel"><td>Critical Weaknesses</td></tr></table>
                 <!--Power-->
                 <input name = "attr_power_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
                 <table class = "power_cw cw">
@@ -254,8 +254,75 @@
                     </tr>
                 </table>
 
+                <div class = "divider"></div>
+
+                <!--Stand Abilities-->
+                <table><tr class = "statlabel special"><td>Abilities</td></tr></table>
+                <table>
+                    <tr class = "statlabel">
+                        <td class = "ab-name">Name</td>
+                        <td class = "ab-roll">Roll</td>
+                        <td class = "ab-range">Range</td>
+                        <td class = "ab-effect">Effect</td>
+                        <td class = "ab-condition">Condition</td>
+                    </tr>
+                </table>
+                <fieldset class = "repeating_abilities">
+                    <table>
+                        <tr>
+                            <td class = "ab-name"><input name = "attr_abilityname"></td>
+                            <td class = "ab-roll">
+                                <select name = "attr_abilityroll">
+                                    <option>1d6</option>
+                                    <option>2d6k1</option>
+                                    <option selected>2d6</option>
+                                    <option>3d6k2</option>
+                                    <option>3d6</option>
+                                </select>
+                            </td>
+                            <td class = "ab-range"><input name = "attr_abilityrange"></td>
+                            <td class = "ab-effect"><textarea name = "attr_abilityeffect"></textarea></td>
+                            <td class = "ab-condition"><textarea name = "attr_abilityeffect"></textarea></td>
+                        </tr>
+                    </table>
+                </fieldset>
             </div>
 
+        </div>
+        <div class = "secretactions section">
+            <!--Inventory-->
+            <table><tr class = "statlabel"><td>Inventory</td></tr></table>
+            <fieldset class = "repeating_inventory">
+                <table><tr><td><textarea name = "attr_item"></textarea></td></tr></table>
+            </fieldset>
+
+            <div class = "divider"></div>
+            <!--Secret Actions-->
+            <table><tr class = "statlabel special"><td>Secret Actions</td></tr></table>
+            <table>
+                <tr class = "statlabel">
+                    <td class = "sa-moves">Name</td>
+                    <td class = "sa-roll">Roll</td>
+                    <td class = "sa-desc">Description</td>
+                    </tr>
+            </table>
+            <fieldset class = "repeating_actions">
+                <table>
+                    <td class = "sa-moves"><input name = "attr_actionname"></td>
+                    <td class = "sa-roll">
+                        <select name = "attr_actionroll">
+                            <option>1d6</option>
+                            <option>2d6k1</option>
+                            <option selected>2d6</option>
+                            <option>3d6k2</option>
+                            <option>3d6</option>
+                        </select>
+                    </td>
+                    <td class = "sa-desc">
+                        <textarea name = "attr_actiondesc"></textarea>
+                    </td>
+                </table>
+            </fieldset>
         </div>
 
         <!--The section of the ~forbidden~ inputs. This should always go last. -->
@@ -320,7 +387,7 @@
 
       //stat dice and mods
       let rankvals = ["E","D","C","B","A"]
-      let dicevals = ["1d6","2d6 keep 1","2d6","3d6 keep 2","3d6"];
+      let dicevals = ["1d6","2d6k1","2d6","3d6k2","3d6"];
       let modvals = ["-5","-3","+1","+3","+5"];
 
       on("change:power_val", function(eventInfo) {
