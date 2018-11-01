@@ -168,6 +168,9 @@
     display: flex;
 }
 /*Textarea nonsense*/
+.charsheet .sheet-grid .sheet-item textarea {
+    text-align: left;
+}
 .charsheet .sheet-cw textarea {
     height: 80%;
 }
@@ -228,4 +231,8 @@
 }
 .charsheet button[type = "roll"]:hover{
     color:#b14623;
+}
+/*Traits/flaws section */
+.charsheet .repeating_traits input, .charsheet .repeating_flaws input, .charsheet .repeating_flaws2 input, .charsheet .repeating_conds input {
+    width:70%;
 }

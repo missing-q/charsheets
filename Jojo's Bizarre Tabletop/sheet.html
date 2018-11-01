@@ -125,7 +125,7 @@
                         </select>
                     </div>
                     <div class = "item"><span name = "attr_power_dice" value = "2d6">2d6</span></div>
-                    <div class = "item"><span name = "attr_power_mod" value = "1">+1</span></div>
+                    <div class = "item"><span name = "attr_power_mod" value = "+1">+1</span></div>
 
                     <!--Speed-->
                     <div class = "item"><button type='roll' value='/roll @{speed_dice}'>Speed</button></div>
@@ -139,7 +139,7 @@
                         </select>
                     </div>
                     <div class = "item"><span name = "attr_speed_dice" value = "2d6">2d6</span></div>
-                    <div class = "item"><span name = "attr_speed_mod" value = "1">+1</span></div>
+                    <div class = "item"><span name = "attr_speed_mod" value = "+1">+1</span></div>
 
                     <!--Range-->
                     <div class = "item"><button type='roll' value='/roll @{range_dice}'>Range</button></div>
@@ -153,7 +153,7 @@
                         </select>
                     </div>
                     <div class = "item"><span name = "attr_range_dice" value = "2d6">2d6</span></div>
-                    <div class = "item"><span name = "attr_range_mod" value = "1">+1</span></div>
+                    <div class = "item"><span name = "attr_range_mod" value = "+1">+1</span></div>
 
                     <!--Durability-->
                     <div class = "item"><button type='roll' value='/roll @{durability_dice}'>Durability</button></div>
@@ -167,7 +167,7 @@
                         </select>
                     </div>
                     <div class = "item"><span name = "attr_durability_dice" value = "2d6">2d6</span></div>
-                    <div class = "item"><span name = "attr_durability_mod" value = "1">+1</span></div>
+                    <div class = "item"><span name = "attr_durability_mod" value = "+1">+1</span></div>
 
                     <!--Precision-->
                     <div class = "item"><button type='roll' value='/roll @{precision_dice}'>Precision</button></div>
@@ -181,7 +181,7 @@
                         </select>
                     </div>
                     <div class = "item"><span name = "attr_precision_dice" value = "2d6">2d6</span></div>
-                    <div class = "item"><span name = "attr_precision_mod" value = "1">+1</span></div>
+                    <div class = "item"><span name = "attr_precision_mod" value = "+1">+1</span></div>
 
                     <!--Learning-->
                     <div class = "item"><button type='roll' value='/roll @{learning_dice}'>Learning</button></div>
@@ -195,7 +195,7 @@
                         </select>
                     </div>
                     <div class = "item"><span name = "attr_learning_dice" value = "2d6">2d6</span></div>
-                    <div class = "item"><span name = "attr_learning_mod" value = "1">+1</span></div>
+                    <div class = "item"><span name = "attr_learning_mod" value = "+1">+1</span></div>
                 </div>
 
                 <!--Critical weaknesses-->
@@ -247,7 +247,9 @@
                 </div>
                 <fieldset class = "repeating_abilities">
                     <div class = "grid grid5">
-                        <div class = "ab-name item"><input name = "attr_abilityname" type = "text"></div>
+                        <div class = "ab-name item">
+                            <button type='roll' value='/roll @{abilityroll}'><span style = "font-family: dicefontd6">F</span></button>
+                            <input name = "attr_abilityname" type = "text"></div>
                         <div class = "ab-roll item">
                             <select name = "attr_abilityroll">
                                 <option>1d6</option>
@@ -255,7 +257,7 @@
                                 <option selected>2d6</option>
                                 <option>3d6k2</option>
                                 <option>3d6</option>
-                                </select>
+                            </select>
                         </div>
                         <div class = "ab-range item"><input name = "attr_abilityrange" type = "text"></div>
                         <div class = "ab-effect item"><textarea name = "attr_abilityeffect"></textarea></div>
@@ -288,7 +290,10 @@
             </div>
             <fieldset class = "repeating_actions">
                 <div class = "grid grid3">
-                    <div class = "item sa-moves"><input name = "attr_actionname" type = "text"></div>
+                    <div class = "item sa-moves">
+                        <button type='roll' value='/roll @{actionroll}'><span style = "font-family: dicefontd6">F</span></button>
+                        <input name = "attr_actionname" type = "text">
+                        </div>
                     <div class = "item sa-roll">
                         <select name = "attr_actionroll">
                             <option>1d6</option>
@@ -308,10 +313,14 @@
 
             <!--Traits-->
             <div class = "grid grid1"><div class = "item statlabel">Traits</div></div>
+            <div class = "grid grid2">
+                <div class = "item bold">Name</div>
+                <div class = "item bold">Description</div>
+            </div>
             <fieldset class = "repeating_traits">
                 <div class = "grid grid2">
                     <div class = "item tr-value">
-                        <input type = "number" min = "0" max = "5" value = "0" name = "attr_tr_val">
+                        <input type = "text" name = "attr_tr_val">
                     </div>
                     <div class = "item tr-desc">
                         <textarea class = "item tr-desc" name = "attr_tr_desc"></textarea>
@@ -321,10 +330,14 @@
 
             <!--Flaws-->
             <div class = "grid grid1"><div class = "item statlabel">Flaws</div></div>
+            <div class = "grid grid2">
+                <div class = "item bold">Name</div>
+                <div class = "item bold">Description</div>
+            </div>
             <fieldset class = "repeating_flaws">
                 <div class = "grid grid2">
                     <div class = "item fl-value">
-                        <input type = "number" min = "-5" max = "0" value = "0" name = "attr_fl_val">
+                        <input type = "text" name = "attr_fl_val">
                     </div>
                     <div class = "item fl-desc">
                         <textarea class = "item fl-desc" name = "attr_fl_desc"></textarea>
@@ -334,10 +347,14 @@
 
             <!--Permanent flaws-->
             <div class = "grid grid1"><div class = "item statlabel">Permanent Flaws</div></div>
+            <div class = "grid grid2">
+                <div class = "item bold">Name</div>
+                <div class = "item bold">Description</div>
+            </div>
             <fieldset class = "repeating_flaws2">
                 <div class = "grid grid2">
                     <div class = "item fl2-value">
-                        <input type = "number" min = "-5" max = "0" value = "0" name = "attr_fl2_val">
+                        <input type = "text" name = "attr_fl2_val">
                     </div>
                     <div class = "item fl2-desc">
                         <textarea class = "item fl2-desc" name = "attr_fl2_desc"></textarea>
@@ -347,6 +364,10 @@
 
             <!--Conditions-->
             <div class = "grid grid1"><div class = "item statlabel">Conditions</div></div>
+            <div class = "grid grid2">
+                <div class = "item bold">Name</div>
+                <div class = "item bold">Description</div>
+            </div>
             <fieldset class = "repeating_conds">
                 <div class = "grid grid2">
                     <div class = "item cd-value">
@@ -433,6 +454,11 @@
 
         </div>
     </div>
+
+    <!--Rolltemplate time -->
+    <rolltemplate class="sheet-rolltemplate-jjba">
+
+    </rolltemplate>
 
     <!-- It's time for scripts -->
     <script type="text/worker">
