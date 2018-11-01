@@ -40,40 +40,37 @@
             <div class = "divider"></div>
 
             <!-- User Stats -->
-            <table>
-                <tr class = "statlabel">
-                    <td>Brains</td>
-                    <td>Brawns</td>
-                    <td>Bravery</td>
-                </tr>
-                <tr>
-                    <td>
-                        <input name = "attr_brains" type = "number" value = "0">
-                    </td>
-                    <td>
-                        <input name = "attr_brawns" type = "number" value = "0">
-                    </td>
-                    <td>
-                        <input name = "attr_bravery" type = "number" value = "0">
-                    </td>
-                </tr>
-                <tr class = "statlabel">
-                    <td>Real Health</td>
-                    <td>Resolve Health</td>
-                    <td>Bizarre Points</td>
-                </tr>
-                <tr>
-                    <td>
-                        <input name = "attr_health" type = "number" value = "0">
-                    </td>
-                    <td>
-                        <input name = "attr_resolve" type = "number" value = "0">
-                    </td>
-                    <td>
-                        <input name = "attr_bp" type = "number" value = "0">
-                    </td>
-                </tr>
-            </table>
+            <div class = "grid">
+                <div class = "statlabel item">Brains</div>
+                <div class = "statlabel item">Brawns</div>
+                <div class = "statlabel item">Bravery</div>
+                <div class = "item">
+                    <input name = "attr_brains" type = "number" value = "0">
+                </div>
+                <div class = "item">
+                    <input name = "attr_brawns" type = "number" value = "0">
+                </div>
+                <div class = "item">
+                    <input name = "attr_bravery" type = "number" value = "0">
+                </div>
+
+            </div>
+            <div class = "grid">
+                <div class = "statlabel item">Real Health</div>
+                <div class = "statlabel item">Resolve Health</div>
+                <div class = "statlabel item">Bizarre Points</div>
+                <div class = "item">
+                    <input name = "attr_health" type = "number" value = "0">
+                </div>
+                <div class = "item">
+                    <input name = "attr_resolve" type = "number" value = "0">
+                </div>
+                <div class = "item">
+                    <input name = "attr_bp" type = "number" value = "0">
+                </div>
+            </div>
+
+            <!-- -->
         </div>
 
         <input name = "attr_hasstand" type = "checkbox" class = "has_stand hidden" checked = "checked" value = "1">
@@ -110,206 +107,189 @@
                 <div class = "divider"></div>
 
                 <!--Stats-->
-                <table>
-                    <tr class = "statlabel">
-                        <td>Stat</td>
-                        <td>Rank</td>
-                        <td>Dice</td>
-                        <td>Modifier</td>
-                    </tr>
-                    <tr class = "power">
-                        <td><button type='roll' value='/roll @{power_dice}'>Power</button></td>
-                        <td>
-                            <select name = "attr_power_val">
-                                <option>A</option>
-                                <option>B</option>
-                                <option selected>C</option>
-                                <option>D</option>
-                                <option>E</option>
-                            </select>
-                        </td>
-                        <td><span name = "attr_power_dice" value = "2d6">2d6</span></td>
-                        <td><span name = "attr_power_mod" value = "1">+1</span></td>
-                    </tr>
-                    <tr class = "speed">
-                        <td><button type='roll' value='/roll @{speed_dice}'>Speed</button></td>
-                        <td>
-                            <select name = "attr_speed_val">
-                                <option>A</option>
-                                <option>B</option>
-                                <option selected>C</option>
-                                <option>D</option>
-                                <option>E</option>
-                            </select>
-                        </td>
-                        <td><span name = "attr_speed_dice" value = "2d6">2d6</span></td>
-                        <td><span name = "attr_speed_mod" value = "1">+1</span></td>
-                    </tr>
-                    <tr class = "range">
-                        <td><button type='roll' value='/roll @{range_dice}'>Range</button></td>
-                        <td>
-                            <select name = "attr_range_val">
-                                <option>A</option>
-                                <option>B</option>
-                                <option selected>C</option>
-                                <option>D</option>
-                                <option>E</option>
-                            </select>
-                        </td>
-                        <td><span name = "attr_range_dice" value = "2d6">2d6</span></td>
-                        <td><span name = "attr_range_mod" value = "1">+1</span></td>
-                    </tr>
-                    <tr class = "durability">
-                        <td><button type='roll' value='/roll @{durability_dice}'>Durability</button></td>
-                        <td>
-                            <select name = "attr_durability_val">
-                                <option>A</option>
-                                <option>B</option>
-                                <option selected>C</option>
-                                <option>D</option>
-                                <option>E</option>
-                            </select>
-                        </td>
-                        <td><span name = "attr_durability_dice" value = "2d6">2d6</span></td>
-                        <td><span name = "attr_durability_mod" value = "1">+1</span></td>
-                    </tr>
-                    <tr class = "precision">
-                        <td><button type='roll' value='/roll @{precision_dice}'>Precision</button></td>
-                        <td>
-                            <select name = "attr_precision_val">
-                                <option>A</option>
-                                <option>B</option>
-                                <option selected>C</option>
-                                <option>D</option>
-                                <option>E</option>
-                            </select>
-                        </td>
-                        <td><span name = "attr_precision_dice" value = "2d6">2d6</span></td>
-                        <td><span name = "attr_precision_mod" value = "1">+1</span></td>
-                    </tr>
-                    <tr class = "learning">
-                        <td><button type='roll' value='/roll @{learning_dice}'>Learning</button></td>
-                        <td>
-                            <select name = "attr_learning_val">
-                                <option>A</option>
-                                <option>B</option>
-                                <option selected>C</option>
-                                <option>D</option>
-                                <option>E</option>
-                            </select>
-                        </td>
-                        <td><span name = "attr_learning_dice" value = "2d6">2d6</span></td>
-                        <td><span name = "attr_learning_mod" value = "1">+1</span></td>
-                    </tr>
-                </table>
+                <div class = "grid grid4">
+                    <div class = "statlabel item">Stat</div>
+                    <div class = "statlabel item">Rank</div>
+                    <div class = "statlabel item">Dice</div>
+                    <div class = "statlabel item">Modifier</div>
+
+                    <!--Power-->
+                    <div class = "item"><button type='roll' value='/roll @{power_dice}'>Power</button></div>
+                    <div class = "item">
+                        <select name = "attr_power_val">
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    </div>
+                    <div class = "item"><span name = "attr_power_dice" value = "2d6">2d6</span></div>
+                    <div class = "item"><span name = "attr_power_mod" value = "1">+1</span></div>
+
+                    <!--Speed-->
+                    <div class = "item"><button type='roll' value='/roll @{speed_dice}'>Speed</button></div>
+                    <div class = "item">
+                        <select name = "attr_speed_val">
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    </div>
+                    <div class = "item"><span name = "attr_speed_dice" value = "2d6">2d6</span></div>
+                    <div class = "item"><span name = "attr_speed_mod" value = "1">+1</span></div>
+
+                    <!--Range-->
+                    <div class = "item"><button type='roll' value='/roll @{range_dice}'>Range</button></div>
+                    <div class = "item">
+                        <select name = "attr_range_val">
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    </div>
+                    <div class = "item"><span name = "attr_range_dice" value = "2d6">2d6</span></div>
+                    <div class = "item"><span name = "attr_range_mod" value = "1">+1</span></div>
+
+                    <!--Durability-->
+                    <div class = "item"><button type='roll' value='/roll @{durability_dice}'>Durability</button></div>
+                    <div class = "item">
+                        <select name = "attr_durability_val">
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    </div>
+                    <div class = "item"><span name = "attr_durability_dice" value = "2d6">2d6</span></div>
+                    <div class = "item"><span name = "attr_durability_mod" value = "1">+1</span></div>
+
+                    <!--Precision-->
+                    <div class = "item"><button type='roll' value='/roll @{precision_dice}'>Precision</button></div>
+                    <div class = "item">
+                        <select name = "attr_precision_val">
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    </div>
+                    <div class = "item"><span name = "attr_precision_dice" value = "2d6">2d6</span></div>
+                    <div class = "item"><span name = "attr_precision_mod" value = "1">+1</span></div>
+
+                    <!--Learning-->
+                    <div class = "item"><button type='roll' value='/roll @{learning_dice}'>Learning</button></div>
+                    <div class = "item">
+                        <select name = "attr_learning_val">
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    </div>
+                    <div class = "item"><span name = "attr_learning_dice" value = "2d6">2d6</span></div>
+                    <div class = "item"><span name = "attr_learning_mod" value = "1">+1</span></div>
+                </div>
 
                 <!--Critical weaknesses-->
-                <table><tr class = "statlabel"><td>Critical Weaknesses</td></tr></table>
-                <!--Power-->
-                <input name = "attr_power_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
-                <table class = "power_cw cw">
-                    <tr>
-                        <td>Power</td>
-                        <td><textarea name = "attr_power_cw_input"></textarea></td>
-                    </tr>
-                </table>
-                <!--Speed-->
-                <input name = "attr_speed_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
-                <table class = "speed_cw cw">
-                    <tr>
-                        <td>Speed</td>
-                        <td><textarea name = "attr_speed_cw_input"></textarea></td>
-                    </tr>
-                </table>
-                <!--Range-->
-                <input name = "attr_range_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
-                <table class = "range_cw cw">
-                    <tr>
-                        <td>Range</td>
-                        <td><textarea name = "attr_range_cw_input"></textarea></td>
-                    </tr>
-                </table>
-                <!--Durability-->
-                <input name = "attr_durability_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
-                <table class = "durability_cw cw">
-                    <tr>
-                        <td>Durability</td>
-                        <td><textarea name = "attr_durability_cw_input"></textarea></td>
-                    </tr>
-                </table>
-                <!--Precision-->
-                <input name = "attr_precision_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
-                <table class = "precision_cw cw">
-                    <tr>
-                        <td>Precision</td>
-                        <td><textarea name = "attr_precision_cw_input"></textarea></td>
-                    </tr>
-                </table>
-                <!--Learning-->
-                <input name = "attr_learning_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
-                <table class = "learning_cw cw">
-                    <tr>
-                        <td>Learning</td>
-                        <td><textarea name = "attr_learning_cw_input"></textarea></td>
-                    </tr>
-                </table>
+                <div class = "grid grid1"><div class = "item statlabel">Critical Weaknesses</div></div>
+                <div class = "grid grid2">
+
+                    <!--Power-->
+                    <input name = "attr_power_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
+                    <div class = "item power_cw cw">Power</div>
+                    <div class = "item power_cw cw"><textarea name = "attr_power_cw_input"></textarea></div>
+
+                    <!--Speed-->
+                    <input name = "attr_speed_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
+                    <div class = "item speed_cw cw">Speed</div>
+                    <div class = "item speed_cw cw"><textarea name = "attr_speed_cw_input"></textarea></div>
+
+                    <!--Range-->
+                    <input name = "attr_range_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
+                    <div class = "item range_cw cw">Range</div>
+                    <div class = "item range_cw cw"><textarea name = "attr_range_cw_input"></textarea></div>
+
+                    <!--Durability-->
+                    <input name = "attr_durability_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
+                    <div class = "item durability_cw cw">Durability</div>
+                    <div class = "item durability_cw cw"><textarea name = "attr_durability_cw_input"></textarea></div>
+
+                    <!--Precision-->
+                    <input name = "attr_precision_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
+                    <div class = "item precision_cw cw">Precision</div>
+                    <div class = "item precision_cw cw"><textarea name = "attr_precision_cw_input"></textarea></div>
+
+                    <!--Learning-->
+                    <input name = "attr_learning_cw" class = "hidden" type = "checkbox" checked = "" value = "1">
+                    <div class = "item learning_cw cw">Learning</div>
+                    <div class = "item learning_cw cw"><textarea name = "attr_learning_cw_input"></textarea></div>
+                </div>
 
                 <div class = "divider"></div>
 
                 <!--Stand Abilities-->
-                <table><tr class = "statlabel special"><td>Abilities</td></tr></table>
-                <table>
-                    <tr class = "statlabel">
-                        <td class = "ab-name">Name</td>
-                        <td class = "ab-roll">Roll</td>
-                        <td class = "ab-range">Range</td>
-                        <td class = "ab-effect">Effect</td>
-                        <td class = "ab-condition">Condition</td>
-                    </tr>
-                </table>
+                <div class = "grid grid1"><div class = "item statlabel">Abilities</div></div>
+                <div class = "divider-special"></div>
+                <div class = "grid grid5">
+                    <div class = "ab-name bold item">Name</div>
+                    <div class = "ab-roll bold item ">Roll</div>
+                    <div class = "ab-range bold item">Range</div>
+                    <div class = "ab-effect bold item">Effect</div>
+                    <div class = "ab-condition bold item">Condition</div>
+                </div>
                 <fieldset class = "repeating_abilities">
-                    <table>
-                        <tr>
-                            <td class = "ab-name"><input name = "attr_abilityname" type = "text"></td>
-                            <td class = "ab-roll">
-                                <select name = "attr_abilityroll">
-                                    <option>1d6</option>
-                                    <option>2d6k1</option>
-                                    <option selected>2d6</option>
-                                    <option>3d6k2</option>
-                                    <option>3d6</option>
+                    <div class = "grid grid5">
+                        <div class = "ab-name item"><input name = "attr_abilityname" type = "text"></div>
+                        <div class = "ab-roll item">
+                            <select name = "attr_abilityroll">
+                                <option>1d6</option>
+                                <option>2d6k1</option>
+                                <option selected>2d6</option>
+                                <option>3d6k2</option>
+                                <option>3d6</option>
                                 </select>
-                            </td>
-                            <td class = "ab-range"><input name = "attr_abilityrange" type = "text"></td>
-                            <td class = "ab-effect"><textarea name = "attr_abilityeffect"></textarea></td>
-                            <td class = "ab-condition"><textarea name = "attr_abilitycondition"></textarea></td>
-                        </tr>
-                    </table>
+                        </div>
+                        <div class = "ab-range item"><input name = "attr_abilityrange" type = "text"></div>
+                        <div class = "ab-effect item"><textarea name = "attr_abilityeffect"></textarea></div>
+                        <div class = "ab-condition item"><textarea name = "attr_abilitycondition"></textarea></div>
+                    </div>
                 </fieldset>
+
+
             </div>
 
         </div>
-        <div class = "secretactions section">
+
+        <!---->
+        <div class = "userinfo section">
             <!--Inventory-->
-            <table><tr class = "statlabel"><td>Inventory</td></tr></table>
+            <div class = "grid grid1"><div class = "item statlabel">Inventory</div></div>
             <fieldset class = "repeating_inventory">
-                <table><tr><td><textarea name = "attr_item"></textarea></td></tr></table>
+                <div class = "grid grid1">
+                    <div class = "item"><textarea name = "attr_item"></textarea></div>
+                </div>
             </fieldset>
 
-            <div class = "divider"></div>
             <!--Secret Actions-->
-            <table><tr class = "statlabel special"><td>Secret Actions</td></tr></table>
-            <table>
-                <tr class = "statlabel">
-                    <td class = "sa-moves">Name</td>
-                    <td class = "sa-roll">Roll</td>
-                    <td class = "sa-desc">Description</td>
-                    </tr>
-            </table>
+            <div class = "grid grid1"><div class = "item statlabel">Secret Actions</div></div>
+            <div class = "divider-special"></div>
+            <div class = "grid grid3">
+                <div class = "item bold">Name</div>
+                <div class = "item bold">Roll</div>
+                <div class = "item bold">Description</div>
+            </div>
             <fieldset class = "repeating_actions">
-                <table>
-                    <td class = "sa-moves"><input name = "attr_actionname" type = "text"></td>
-                    <td class = "sa-roll">
+                <div class = "grid grid3">
+                    <div class = "item sa-moves"><input name = "attr_actionname" type = "text"></div>
+                    <div class = "item sa-roll">
                         <select name = "attr_actionroll">
                             <option>1d6</option>
                             <option>2d6k1</option>
@@ -317,12 +297,122 @@
                             <option>3d6k2</option>
                             <option>3d6</option>
                         </select>
-                    </td>
-                    <td class = "sa-desc">
+                    </div>
+                    <div class = "item sa-desc">
                         <textarea name = "attr_actiondesc"></textarea>
-                    </td>
-                </table>
+                    </div>
+                </div>
+
             </fieldset>
+            <div class = "divider"></div>
+
+            <!--Traits-->
+            <div class = "grid grid1"><div class = "item statlabel">Traits</div></div>
+            <fieldset class = "repeating_traits">
+                <div class = "grid grid2">
+                    <div class = "item tr-value">
+                        <input type = "number" min = "0" max = "5" value = "0" name = "attr_tr_val">
+                    </div>
+                    <div class = "item tr-desc">
+                        <textarea class = "item tr-desc" name = "attr_tr_desc"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!--Flaws-->
+            <div class = "grid grid1"><div class = "item statlabel">Flaws</div></div>
+            <fieldset class = "repeating_flaws">
+                <div class = "grid grid2">
+                    <div class = "item fl-value">
+                        <input type = "number" min = "-5" max = "0" value = "0" name = "attr_fl_val">
+                    </div>
+                    <div class = "item fl-desc">
+                        <textarea class = "item fl-desc" name = "attr_fl_desc"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!--Permanent flaws-->
+            <div class = "grid grid1"><div class = "item statlabel">Permanent Flaws</div></div>
+            <fieldset class = "repeating_flaws2">
+                <div class = "grid grid2">
+                    <div class = "item fl2-value">
+                        <input type = "number" min = "-5" max = "0" value = "0" name = "attr_fl2_val">
+                    </div>
+                    <div class = "item fl2-desc">
+                        <textarea class = "item fl2-desc" name = "attr_fl2_desc"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!--Conditions-->
+            <div class = "grid grid1"><div class = "item statlabel">Conditions</div></div>
+            <fieldset class = "repeating_conds">
+                <div class = "grid grid2">
+                    <div class = "item cd-value">
+                        <input type = "text" name = "attr_cond_name">
+                    </div>
+                    <div class = "item cd-desc">
+                        <textarea class = "item fl2-desc" name = "attr_cond_desc"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!---->
+            <div class = "divider"></div>
+            <!--Character Details-->
+            <div class = "grid grid1"><div class = "item statlabel">Character Details</div></div>
+            <div class = "grid grid4 gridgap">
+
+                <div class = "item bold">Age</div>
+                <div class = "item"><input type = "text" name = "attr_chr1"></div>
+                <div class = "item bold">Nationality</div>
+                <div class = "item"><input type = "text" name = "attr_chr2"></div>
+
+
+                <div class = "item bold">Birthday</div>
+                <div class = "item"><input type = "text" name = "attr_chr3"></div>
+                <div class = "item bold">Eye Color</div>
+                <div class = "item"><input type = "text" name = "attr_chr4"></div>
+
+                <div class = "item bold">Zodiac Sign</div>
+                <div class = "item"><input type = "text" name = "attr_chr5"></div>
+                <div class = "item bold">Favorite Movie</div>
+                <div class = "item"><input type = "text" name = "attr_chr6"></div>
+
+                <div class = "item bold">Gender</div>
+                <div class = "item"><input type = "text" name = "attr_chr7"></div>
+                <div class = "item bold">Favorite Food</div>
+                <div class = "item"><input type = "text" name = "attr_chr8"></div>
+
+                <div class = "item bold">Height</div>
+                <div class = "item"><input type = "text" name = "attr_chr9"></div>
+                <div class = "item bold">Favorite Actor</div>
+                <div class = "item"><input type = "text" name = "attr_chr10"></div>
+
+                <div class = "item bold">Weight</div>
+                <div class = "item"><input type = "text" name = "attr_chr11"></div>
+                <div class = "item bold">Favorite Musician</div>
+                <div class = "item"><input type = "text" name = "attr_chr12"></div>
+
+                <div class = "item bold">Blood Type</div>
+                <div class = "item"><input type = "text" name = "attr_chr13"></div>
+                <div class = "item bold">Favorite Athlete</div>
+                <div class = "item"><input type = "text" name = "attr_chr14"></div>
+
+                <div class = "item bold">Occupation</div>
+                <div class = "item"><input type = "text" name = "attr_chr15"></div>
+                <div class = "item bold"><input type = "text" name = "attr_chr16" value = "..."></div>
+                <div class = "item"><input type = "text" name = "attr_chr17"></div>
+            </div>
+
+            <div class = "divider"></div>
+
+            <div class = "grid grid1"><div class = "item statlabel">Character Bio</div></div>
+            <div class = "grid grid1 characterbio item">
+                <textarea name = "attr_charbio"></textarea>
+            </div>
+
         </div>
 
         <!--The section of the ~forbidden~ inputs. This should always go last. -->
