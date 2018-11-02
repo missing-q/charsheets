@@ -41,9 +41,9 @@
 
             <!-- User Stats -->
             <div class = "grid">
-                <div class = "statlabel item">Brains</div>
-                <div class = "statlabel item">Brawns</div>
-                <div class = "statlabel item">Bravery</div>
+                <div class = "statlabel item"><button type='roll' value='/roll 1d6 + @{brains}'>Brains</button></div>
+                <div class = "statlabel item"><button type='roll' value='/roll 1d6 + @{brawns}'>Brawns</button></div>
+                <div class = "statlabel item"><button type='roll' value='/roll 1d6 + @{bravery}'>Bravery</button></div>
                 <div class = "item">
                     <input name = "attr_brains" type = "number" value = "0">
                 </div>
@@ -274,11 +274,9 @@
         <div class = "userinfo section">
             <!--Inventory-->
             <div class = "grid grid1"><div class = "item statlabel">Inventory</div></div>
-            <fieldset class = "repeating_inventory">
-                <div class = "grid grid1">
-                    <div class = "item"><textarea name = "attr_item"></textarea></div>
-                </div>
-            </fieldset>
+            <div class = "grid grid1 inventory">
+                <div class = "item"><textarea name = "attr_item"></textarea></div>
+            </div>
 
             <!--Secret Actions-->
             <div class = "grid grid1"><div class = "item statlabel">Secret Actions</div></div>
@@ -430,8 +428,8 @@
             <div class = "divider"></div>
 
             <div class = "grid grid1"><div class = "item statlabel">Character Bio</div></div>
-            <div class = "grid grid1 characterbio item">
-                <textarea name = "attr_charbio"></textarea>
+            <div class = "grid grid1 characterbio">
+                <div class = "item"><textarea name = "attr_charbio"></textarea></div>
             </div>
 
         </div>

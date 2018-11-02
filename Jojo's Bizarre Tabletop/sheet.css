@@ -41,7 +41,7 @@
     align-items: center;
     justify-content: center;
 }
-.charsheet .sheet-grid input[type="text"], .charsheet .sheet-grid textarea {
+.charsheet .sheet-grid input[type="text"],.charsheet .sheet-grid textarea {
     font-size:11px;
 }
 .charsheet .sheet-grid2 .sheet-item{
@@ -181,9 +181,7 @@
 .charsheet .sheet-ab-name input,.charsheet .sheet-ab-roll select,.charsheet .sheet-ab-range input {
     width:70%;
 }
-.charsheet .sheet-cd-value input {
-    width: 60%;
-}
+/*Traits/flaws section */
 .charsheet .sa-roll select {
     width:30%;
 }
@@ -194,23 +192,13 @@
     height: 80%;
     width: 100%;
 }
-.charsheet .repeating_inventory textarea {
-    width:100%;
-    margin:0;
-    padding:0;
+.charsheet .sheet-tr-value input, .charsheet .sheet-fl-value input, .charsheet .sheet-fl2-value input, .charsheet .sheet-cd-value input{
+    width:70%;
 }
-.charsheet .repeating_inventory td {
-    padding: 1vh 0;
-}
-.charsheet .sheet-tr-desc textarea, .charsheet .sheet-fl-desc textarea, .charsheet .sheet-fl2-desc textarea, .sheet-cd-desc textarea {
+.charsheet .sheet-tr-desc textarea,.charsheet .sheet-fl-desc textarea,.charsheet .sheet-fl2-desc textarea,.charsheet .sheet-cd-desc textarea {
     height: 60%;
 }
-
-.charsheet .sheet-characterbio{
-    padding-left: 0;
-}
-
-/*Buttons aaaa */
+/*Button nonsense*/
 .charsheet button[type = "roll"]{
     background-color: transparent;
     color: inherit;
@@ -232,7 +220,9 @@
 .charsheet button[type = "roll"]:hover{
     color:#b14623;
 }
-/*Traits/flaws section */
-.charsheet .repeating_traits input, .charsheet .repeating_flaws input, .charsheet .repeating_flaws2 input, .charsheet .repeating_conds input {
-    width:70%;
+.charsheet .sheet-statlabel button[type = "roll"] {
+    font-weight:bold;
+}
+.charsheet .sheet-statlabel button[type = "roll"]:hover {
+    color:#602749;
 }
