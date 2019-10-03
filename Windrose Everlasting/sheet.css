@@ -1,6 +1,7 @@
 .charsheet {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    background: url("https://raw.githubusercontent.com/missing-q/charsheets/master/Windrose%20Everlasting/assets/bg.png);
+    background-image: url('http://imgsrv.roll20.net/?src=raw.githubusercontent.com/missing-q/charsheets/master/Windrose%2520Everlasting/assets/bg.png');
+    background-size: cover;
     color: #602749;
 
 }
@@ -9,11 +10,22 @@
 }
 .charsheet .sheet-grid {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     width: 100%;
 }
 
 .charsheet .sheet-grid1 {
-    grid-row-gap: 20%;
+    grid-column-gap: 15%;
     grid-template-columns: 30% 50%;
+}
+
+.charsheet .sheet-attributes {
+    border-style: solid;
+    border-color: rgba(0,0,0, .3);
+    border-width: 5px;
+    border-radius: 15px;
+    padding: 3vh;
+    background-color: rgba(255,255,255, .1);
+    box-shadow: 0px 10px 5px rgba(76,59,51,0.4) inset;
+
 }
