@@ -1,48 +1,72 @@
 <html>
     <div class = "charinfo">
+            <div class = "grid grid-a">
+                <div class = "grid grid-c charstuff">
+                    <label>Name:
+                        <input name = "attr_name" type = "text">
+                    </label>
+                    <label>Bio:
+                        <textarea name = "attr_bio"></textarea>
+                    </label>
+                    <div class = "grid">
+                        <label>Health:
+                            <input name = "attr_health" type = "number" value = "0">
+                        </label>
+                        <label>EXP:
+                            <input name = "attr_health" type = "number" value = "0">
+                        </label>
+                        <label>Speed:
+                            <input name = "attr_health" type = "number" value = "0">
+                        </label>
+                    </div>
+                </div>
 
-      <div class = "grid grid2">
+                <div class = "grid grid-c content">
+                    <div class = "attr-row grid grid-d">
+                        <div class = "attr-icon red">
+                            <input name = "attr_red" type = "number" value = "0">
+                        </div>
+                        <textarea name = "attr_desc-red"></textarea>
+                    </div>
+                    <div class = "attr-row grid grid-d">
+                        <div class = "attr-icon blue">
+                            <input name = "attr_blue" type = "number" value = "0">
+                        </div>
+                        <textarea name = "attr_desc-blue"></textarea>
+                    </div>
 
-        <div class="grid grid1">
-          <!--character stuff-->
-          <div class = "info">
-            <label>
-                Name:
-                <input name = "attr_character_name">
-            </label>
-            <label>
-                Description:
-                <textarea name="attr_chardisc"></textarea>
-            </label>
-          </div>
-          <div class="attributes">
-            <div class="red">
-              <div class="colorbox red">
-                <input type="number" name="red" value="0">
-              </div>
-              <textarea name="attr_desc-red"></textarea>
+                    <div class = "attr-row grid grid-d">
+                        <div class = "attr-icon yellow">
+                            <input name = "attr_yellow" type = "number" value = "0">
+                        </div>
+                        <textarea name = "attr_desc-yellow"></textarea>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="blue">
-              <div class="colorbox blue">
-                <input type="number" name="blue" value="0">
-              </div>
-              <textarea name="attr_desc-blue"></textarea>
+            <div class = "grid grid-b giftrow">
+                <div class = "item repeating_gift">
+                    <div class = "attr-icon gifticon">
+                    </div>
+                    <input type="checkbox" class="toggle-gifts">
+                    <div class = "grid grid-c gift-desc hidden">
+                        <label>
+                            Description
+                            <textarea = "attr_gifttext"></textarea>
+                        </label>
+                    </div>
+                    <input name = "attr_giftname" type = "text" class = "giftname">
+                </div>
             </div>
-
-            <div class="yellow">
-              <div class="colorbox yellow">
-                <input type="number" name="yellow" value="0">
-              </div>
-              <textarea name="attr_desc-yellow"></textarea>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
 
     </div>
+
+    <!--Rolltemplate time -->
+    <rolltemplate class="sheet-rolltemplate-jjba">
+
+    </rolltemplate>
 
     <!-- It's time for scripts -->
     <script type="text/worker">

@@ -1,32 +1,154 @@
 .charsheet {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    background: url("https://raw.githubusercontent.com/missing-q/charsheets/master/Windrose%20Everlasting/assets/bg.jpg");
+    background: #f7f7f7;
+    background-image: url('https://raw.githubusercontent.com/missing-q/charsheets/master/Windrose%20Everlasting/assets/bg.jpg');
+    background-size: contain;
     color: #602749;
 
 }
 .charsheet select {
     margin-bottom: 0px;
 }
+.charsheet label {
+    padding-right: 0px;
+    display: flex !important;
+    flex-direction: column;
+    text-align:center;
+    align-items:center;
+}
+.charsheet textarea {
+    resize: none;
+}
+
 .charsheet .sheet-grid {
     display: grid;
     grid-template-columns: auto auto auto;
     width: 100%;
 }
 
-.charsheet .sheet-grid1 {
-    grid-row-gap: 20%;
-    grid-template-columns: 40% 60%;
+.charsheet .sheet-grid-a {
+    grid-template-columns: 30% 60%;
 }
 
-.charsheet .sheet-grid2 {
-    grid-row-gap: 20%;
-    grid-row-columns: 70% 30%;
+.charsheet .sheet-grid-b {
+    grid-template-columns: 25% 15% 15% 15% 15% 15%;
 }
 
+.charsheet .sheet-grid-c {
+    grid-template-columns: 100% !important;
+
+}
+.charsheet .sheet-grid-d {
+    grid-template-columns: 20% 80% !important;
+
+}
+.charsheet .sheet-content {
+    padding: 1vw;
+    width: 100%;
+}
+.charsheet .sheet-charstuff {
+    box-shadow: 0px 10px 20px #5b3a21 inset, 0px -7px 7px #bfa187 inset;
+    background-color: rgba(153,114,76, 0.2);
+    border-radius:20px;
+    padding-top:2.5vh;
+}
+.charsheet .sheet-content {
+    box-shadow: 0px 10px 20px #5b3a21 inset, 0px -7px 7px #bfa187 inset;
+    background-color: rgba(153,114,76, 0.2);
+    border-radius:20px;
+    margin-left: 2vw;
+    padding-top:2.5vh;
+}
+.charsheet .sheet-charstuff textarea {
+    height: 100%;
+    width: 80%;
+}
+.charsheet .sheet-attr-row textarea {
+    height: 100%;
+    width: 90%;
+}
+.charsheet .sheet-red {
+    background-color: #ac1c1c;
+}
+.charsheet .sheet-blue {
+    background-color: #3f99d5;
+}
+.charsheet .sheet-yellow {
+    background-color: #fbec87;
+}
+.charsheet .sheet-attr-icon {
+    background-image: url('https://raw.githubusercontent.com/missing-q/charsheets/master/Windrose%20Everlasting/assets/Get!%20Icons/windrose_flower_pattern.png');
+    background-size: 100% 100%;
+    height: 120%;
+    width: 90%;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: flex-end;
+}
+.charsheet .sheet-attr-icon input {
+    border-radius:20px;
+    border-color:#f3f4dd;
+    background-color: rgba(255,255,255,0.5);
+    color:#000;
+    text-align:center;
+}
+.charsheet .sheet-attr-row {
+    margin-bottom: 4vh;
+}
 .charsheet .sheet-item {
     padding: 1vh;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.charsheet input.sheet-toggle-gifts {
+    border: none;
+    margin-bottom: 2vh;
+    margin-left:1vw;
+    -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+    width: 16px;
+    height: 16px;
+    z-index:999;
+}
+
+.charsheet input.sheet-toggle-gifts::after{
+    content: "⏷";
+}
+
+.charsheet input.sheet-toggle-gifts:checked::after{
+    content: "⏶";
+}
+.charsheet .sheet-hidden {
+    display:none;
+    position:absolute;
+}
+.charsheet input.sheet-toggle-gifts:checked ~ .sheet-gift-desc {
+    display: grid;
+    width:inherit;
+}
+.charsheet .repeating_gift .sheet-gifticon{
+    width:12vh;
+    height:12vh;
+    padding:3vh;
+    border-radius:50%;
+    box-shadow: 0px 7px 7px #5b3a21 inset, 0px -5px 2px #bfa187 inset;
+    background-color: rgba(153,114,76, 0.2);
+    background-blend-mode:soft-light;
+}
+.charsheet .repeating_gift {
+    flex-direction: column;
+    align-items:center;
+}
+.charsheet .repeating_gift input[type=text] {
+    width:90%;
+}
+.charsheet .sheet-giftrow {
+    margin-top:2vh;
+}
+.charsheet .sheet-giftdesc {
+
 }
