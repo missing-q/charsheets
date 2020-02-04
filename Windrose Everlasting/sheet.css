@@ -1,7 +1,7 @@
 .charsheet {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     background: #f7f7f7;
-    background-image: url('https://raw.githubusercontent.com/missing-q/charsheets/master/Windrose%20Everlasting/assets/bg.jpg');
+    background-image: url('https://raw.githubusercontent.com/missing-q/charsheets/master/Windrose%2520Everlasting/assets/bg.jpg');
     background-size: contain;
     color: #602749;
 
@@ -31,7 +31,7 @@
 }
 
 .charsheet .sheet-grid-b {
-    grid-template-columns: 25% 15% 15% 15% 15% 15%;
+    grid-template-columns: 25% 14.5% 14.5% 14.5% 14.5% 14.5%;
 }
 
 .charsheet .sheet-grid-c {
@@ -41,6 +41,9 @@
 .charsheet .sheet-grid-d {
     grid-template-columns: 20% 80% !important;
 
+}
+.charsheet .sheet-grid-f {
+    grid-template-columns: 16% 16% 16% 16% 16% 16%
 }
 .charsheet .sheet-content {
     padding: 1vw;
@@ -58,6 +61,11 @@
     border-radius:20px;
     margin-left: 2vw;
     padding-top:2.5vh;
+}.charsheet .sheet-content-2 {
+    box-shadow: 0px 10px 20px #5b3a21 inset, 0px -7px 7px #bfa187 inset;
+    background-color: rgba(153,114,76, 0.2);
+    border-radius:20px;
+    width: 98%;
 }
 .charsheet .sheet-charstuff textarea {
     height: 100%;
@@ -77,7 +85,7 @@
     background-color: #fbec87;
 }
 .charsheet .sheet-attr-icon {
-    background-image: url('https://raw.githubusercontent.com/missing-q/charsheets/master/Windrose%20Everlasting/assets/Get!%20Icons/windrose_flower_pattern.png');
+    background-image: url('https://raw.githubusercontent.com/missing-q/charsheets/master/Windrose%2520Everlasting/assets/Get%21%2520Icons/windrose_flower_pattern-dark.png');
     background-size: 100% 100%;
     height: 120%;
     width: 90%;
@@ -105,7 +113,6 @@
 }
 .charsheet input.sheet-toggle-gifts {
     border: none;
-    margin-bottom: 2vh;
     margin-left:1vw;
     -webkit-appearance: none;
   -moz-appearance: none;
@@ -113,13 +120,20 @@
     width: 16px;
     height: 16px;
     z-index:999;
+    position: relative;
+    font-size:20px;
+    left: 6vh;
+}
+.charsheet .sheet-giftfirst input.sheet-toggle-gifts {
+    left: 9vh;
+    top: -1.5vh;
 }
 
-.charsheet input.sheet-toggle-gifts::after{
+.charsheet input.sheet-toggle::after{
     content: "⏷";
 }
 
-.charsheet input.sheet-toggle-gifts:checked::after{
+.charsheet input.sheet-toggle:checked::after{
     content: "⏶";
 }
 .charsheet .sheet-hidden {
@@ -130,25 +144,54 @@
     display: grid;
     width:inherit;
 }
-.charsheet .repeating_gift .sheet-gifticon{
-    width:12vh;
-    height:12vh;
+.charsheet .sheet-gift .sheet-gifticon{
+    background-image: url('http://imgsrv.roll20.net:5100/?src=imgsrv.roll20.net%3A5100/%3Fsrc%3Draw.githubusercontent.com/missing-q/charsheets/master/Windrose%252520Everlasting/assets/Get%2521%252520Icons/windrose_flower_pattern.png');
+    background-blend-mode: multiply;
+    width:8vh;
+    height:8vh;
     padding:3vh;
     border-radius:50%;
     box-shadow: 0px 7px 7px #5b3a21 inset, 0px -5px 2px #bfa187 inset;
     background-color: rgba(153,114,76, 0.2);
     background-blend-mode:soft-light;
 }
-.charsheet .repeating_gift {
+.charsheet .sheet-giftfirst .sheet-gifticon {
+    width:12vh !important;
+    height:12vh !important;
+}
+.charsheet .sheet-content-2 .sheet-gifticon {
+    width:10vh !important;
+    height:10vh !important;
+}
+.charsheet .sheet-giftfirst {
+    padding-left: 0px;
+}
+.charsheet .sheet-gift {
     flex-direction: column;
     align-items:center;
+    max-height: 100%;
+    max-width: 100%;
 }
-.charsheet .repeating_gift input[type=text] {
+.charsheet .sheet-gift input[type=text] {
     width:90%;
 }
 .charsheet .sheet-giftrow {
     margin-top:2vh;
 }
-.charsheet .sheet-giftdesc {
-
+.charsheet .sheet-gift-desc {
+    overflow-y:scroll;
+    background-color: #e8e1d0;
+    padding: 1vh;
+    border-radius: 20px;
+    max-height: 20vh;
+    max-width: 15vh;
+}
+.charsheet .sheet-giftfirst .sheet-gift-desc {
+    max-height: 26vh;
+    max-width: 100%;
+}
+.charsheet .repcontainer[data-groupname="repeating_gifts"] {
+    display: grid !important;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+    width: 100%;
 }
