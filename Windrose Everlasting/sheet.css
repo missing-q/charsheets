@@ -1,11 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Tenali+Ramakrishna&display=swap');
+
 .charsheet {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     background: #f7f7f7;
     background-image: url('https://raw.githubusercontent.com/missing-q/charsheets/master/Windrose%2520Everlasting/assets/bg.jpg');
     background-size: contain;
     color: #602749;
-
+    
 }
+.charsheet .sheet-logo h1 {
+    color: #efdabf;
+    padding-bottom: 1vh;
+}
+.sheet-logo {
+    display: inline-block;
+}
+.charsheet .sheet-tabs {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1vh;
+}
+
+.charsheet button {
+    height: 4vh;
+    border-radius: 0px;
+    -moz-appearance: none;
+    background-color: rgba(255,255,255, 0.099) !important;
+    border-color: transparent;
+    margin: 1vh;
+    box-shadow: 0px 7px 5px #5b3a21;
+    background-image: none;
+    color: inherit;
+    text-shadow: none;
+}
+.charsheet button:hover {
+    color:inherit;
+    background-color: rgba(255,255,255, 0.2) !important;
+}
+
+/*Configure the tab buttons*/
+.sheet-character,
+.sheet-magic,
+.sheet-gifts,
+.sheet-config {
+	display: none;
+}
+
+/* show the selected tab */
+.sheet-tabstoggle[value="character"] ~ div.sheet-character,
+.sheet-tabstoggle[value="configuration"] ~ div.sheet-config,
+.sheet-tabstoggle[value="gifts"] ~ div.sheet-gifts,
+.sheet-tabstoggle[value="magic"] ~ div.sheet-magic {
+	display: block;
+}
+
 .charsheet select {
     margin-bottom: 0px;
 }
@@ -36,37 +84,57 @@
 
 .charsheet .sheet-grid-c {
     grid-template-columns: 100% !important;
-
+    
 }
 .charsheet .sheet-grid-d {
     grid-template-columns: 20% 80% !important;
-
+    
 }
 .charsheet .sheet-grid-f {
     grid-template-columns: 16% 16% 16% 16% 16% 16%
 }
+
+.charsheet .sheet-grid-g {
+    grid-template-columns: auto auto;
+}
+
+.charsheet .sheet-grid-h {
+    grid-template-columns: 90% 10%;
+}
+
+.charsheet .sheet-grid-i {
+    grid-template-columns: 5% 95%;
+}
+
 .charsheet .sheet-content {
     padding: 1vw;
     width: 100%;
-}
-.charsheet .sheet-charstuff {
-    box-shadow: 0px 10px 20px #5b3a21 inset, 0px -7px 7px #bfa187 inset;
-    background-color: rgba(153,114,76, 0.2);
-    border-radius:20px;
-    padding-top:2.5vh;
-}
-.charsheet .sheet-content {
-    box-shadow: 0px 10px 20px #5b3a21 inset, 0px -7px 7px #bfa187 inset;
-    background-color: rgba(153,114,76, 0.2);
-    border-radius:20px;
     margin-left: 2vw;
     padding-top:2.5vh;
-}.charsheet .sheet-content-2 {
+}
+
+.charsheet .sheet-content2 {
+    padding-bottom: 1vw;
+    padding-top:2.5vh;
+}
+
+.charsheet .sheet-inset {
     box-shadow: 0px 10px 20px #5b3a21 inset, 0px -7px 7px #bfa187 inset;
     background-color: rgba(153,114,76, 0.2);
     border-radius:20px;
-    width: 98%;
 }
+
+.charsheet .sheet-doubleinset {
+    box-shadow: 0px 7px 4px #5b3a21 inset, 0px -3px 3px #bfa187 inset;
+    background-color: rgba(112,81,51, 0.2);
+    border-radius:20px;
+}
+
+.charsheet .sheet-charstuff {
+    padding-top:2.5vh;
+}
+
+
 .charsheet .sheet-charstuff textarea {
     height: 100%;
     width: 80%;
@@ -85,21 +153,45 @@
     background-color: #fbec87;
 }
 .charsheet .sheet-attr-icon {
-    background-image: url('https://raw.githubusercontent.com/missing-q/charsheets/master/Windrose%2520Everlasting/assets/Get%21%2520Icons/windrose_flower_pattern-dark.png');
+    background-image: url('https://raw.githubusercontent.com/missing-q/charsheets/master/Windrose%20Everlasting/assets/Get!%20Icons/windrose_flower_pattern-dark.png');
     background-size: 100% 100%;
     height: 120%;
     width: 90%;
     display: flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items: flex-end;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items: center;
 }
-.charsheet .sheet-attr-icon input {
+.charsheet .sheet-attr-icon input[type="number"], .charsheet .sheet-swing input{
     border-radius:20px;
     border-color:#f3f4dd;
     background-color: rgba(255,255,255,0.5);
     color:#000;
     text-align:center;
+}
+
+.charsheet .sheet-attr-icon .sheet-big, .charsheet .sheet-swing input {
+    font-size: 40px;
+    text-align:center;
+    border: 0px !important;
+    background-color: transparent !important;
+    border-radius: 0px;
+    padding: 0px;
+}
+.sheet-attr-icon input::-webkit-outer-spin-button,
+.sheet-attr-icon input::-webkit-inner-spin-button, .sheet-swing input::-webkit-outer-spin-button, .sheet-swing input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+.sheet-attr-icon input, .sheet-swing input {
+  -moz-appearance:textfield;
+}
+.sheet-swing {
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    justify-self: center;
 }
 .charsheet .sheet-attr-row {
     margin-bottom: 4vh;
@@ -111,87 +203,47 @@
     align-items: center;
     justify-content: center;
 }
-.charsheet input.sheet-toggle-gifts {
+.charsheet .repcontrol {
+    display:flex;
+    flex-direction:column;
+}
+.charsheet .sheet-wrapper {
+    padding: 2vh;
+    padding-right: 3vh;
+}
+.charsheet .sheet-giftname {
     border: none;
-    margin-left:1vw;
+    color: #efdabf; 
+    padding-left:1vw;
+    border-radius:7px;
+}
+
+.charsheet .sheet-wrapper button::before {
+    font-family: 'Pictos' !important;
+    content: 'w' !important;
+}
+.charsheet .sheet-wrapper button {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+.charsheet .sheet-wrapper textarea {
+    margin-top: 1vw;
+    display: none;
+}
+.charsheet input.sheet-toggle {
+    border: none;
     -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-    width: 16px;
-    height: 16px;
-    z-index:999;
-    position: relative;
-    font-size:20px;
-    left: 6vh;
-}
-.charsheet .sheet-giftfirst input.sheet-toggle-gifts {
-    left: 9vh;
-    top: -1.5vh;
+    color: inherit;
 }
 
 .charsheet input.sheet-toggle::after{
     content: "⏷";
 }
-
 .charsheet input.sheet-toggle:checked::after{
     content: "⏶";
 }
-.charsheet .sheet-hidden {
-    display:none;
-    position:absolute;
-}
-.charsheet input.sheet-toggle-gifts:checked ~ .sheet-gift-desc {
-    display: grid;
-    width:inherit;
-}
-.charsheet .sheet-gift .sheet-gifticon{
-    background-image: url('http://imgsrv.roll20.net:5100/?src=imgsrv.roll20.net%3A5100/%3Fsrc%3Draw.githubusercontent.com/missing-q/charsheets/master/Windrose%252520Everlasting/assets/Get%2521%252520Icons/windrose_flower_pattern.png');
-    background-blend-mode: multiply;
-    width:8vh;
-    height:8vh;
-    padding:3vh;
-    border-radius:50%;
-    box-shadow: 0px 7px 7px #5b3a21 inset, 0px -5px 2px #bfa187 inset;
-    background-color: rgba(153,114,76, 0.2);
-    background-blend-mode:soft-light;
-}
-.charsheet .sheet-giftfirst .sheet-gifticon {
-    width:12vh !important;
-    height:12vh !important;
-}
-.charsheet .sheet-content-2 .sheet-gifticon {
-    width:10vh !important;
-    height:10vh !important;
-}
-.charsheet .sheet-giftfirst {
-    padding-left: 0px;
-}
-.charsheet .sheet-gift {
-    flex-direction: column;
-    align-items:center;
-    max-height: 100%;
-    max-width: 100%;
-}
-.charsheet .sheet-gift input[type=text] {
-    width:90%;
-}
-.charsheet .sheet-giftrow {
-    margin-top:2vh;
-}
-.charsheet .sheet-gift-desc {
-    overflow-y:scroll;
-    background-color: #e8e1d0;
-    padding: 1vh;
-    border-radius: 20px;
-    max-height: 20vh;
-    max-width: 15vh;
-}
-.charsheet .sheet-giftfirst .sheet-gift-desc {
-    max-height: 26vh;
-    max-width: 100%;
-}
-.charsheet .repcontainer[data-groupname="repeating_gifts"] {
-    display: grid !important;
-    grid-template-columns: 16% 16% 16% 16% 16% 16%;
-    width: 100%;
+.charsheet input.sheet-toggle:checked ~ textarea {
+    display:block;
 }
